@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Беларусь и Великая Отечественная война</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2b3a67;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 40px 30px;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(0,0,0,0.7);
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* затемнение фона для читаемости текста */
+        }
+        h2 {
+            color: #ffd54f;
+            border-bottom: 2px solid #ffd54f;
+            padding-bottom: 10px;
+            text-shadow: 0 0 7px rgba(0,0,0,0.8);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        footer {
+            background-color: #2b3a67;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Адаптивность */
+        @media(max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 10px;
+            }
+            section {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Фоновые изображения для каждого раздела */
+        #intro {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Flag_of_Belarus.svg/1280px-Flag_of_Belarus.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            color: #222;
+            text-shadow: none;
+            box-shadow: none;
+            background-color: #f9f9f9;
+        }
+        #beginning {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/58/Troops_Entering_Belarus_1944.jpg');
+        }
+        #partisan {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Belarusian_partisans_at_ceremony_-_7_oct_1944_%282%29.jpg');
+        }
+        #liberation {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Belorussia_Bagration_Op_-_Min_Photos_02-07-2011_067.JPG');
+        }
+        #losses {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/40/Belarus_War_Memorial_Minsk.jpg');
+        }
+        #recovery {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f5/Minsk_central_area_2010-01_panorama-rotated.jpg');
+        }
+        #significance {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Victory_Day_Memorial_Belarus_2017-05-09_03.jpg');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Беларусь и Великая Отечественная война</h1>
+    </header>
+    <nav>
+        <a href="#intro">Введение</a>
+        <a href="#beginning">Начало войны</a>
+        <a href="#partisan">Партизанское движение</a>
+        <a href="#liberation">Освобождение</a>
+        <a href="#losses">Потери и герои</a>
+        <a href="#recovery">Восстановление</a>
+        <a href="#significance">Значение</a>
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Введение</h2>
+            <p>Беларусь — страна с богатой историей, которая в XX веке стала свидетелем и участником одних из самых важных и трагических событий в мировой истории — Великой Отечественной войны 1941–1945 годов. Эта война оставила глубокий след в судьбе народа, разрушила множество городов и сел, но вместе с тем стала символом мужества, стойкости и героизма белорусского народа.</p>
+        </section>
+
+        <section id="beginning">
+            <h2>Начало войны и оккупация</h2>
+            <p>23 июня 1941 года — в день, когда началось масштабное нападение на Советский Союз войсками нацистской Германии, Беларусь стала одним из первых фронтов. Гитлеровская армия быстро продвигалась по территории страны, установив жестокую оккупацию и репрессии. В первые месяцы войны Беларусь стала ареной ожесточённых боёв и страданий, а её население — свидетелями беспримерных зверств.</p>
+            <ul>
+                <li>Более 70% промышленных предприятий было эвакуировано или разрушено.</li>
+                <li>Множество городов и сел было стерто с лица земли.</li>
+                <li>В Беларуси находилось около 450 концентрационных лагерей и узников.</li>
+            </ul>
+        </section>
+
+        <section id="partisan">
+            <h2>Партизанское движение и сопротивление</h2>
+            <p>Несмотря на тяжелые условия, часть белорусского народа не смирилась с оккупацией. В лесах Беларуси сформировалось мощное партизанское движение — одно из крупнейших в Европе.</p>
+            <ul>
+                <li>Воевавшие партизаны боролись за освобождение своей земли, ликвидируя коммуникации, склады и немецкую технику.</li>
+                <li>В годы войны партизанские отряды уничтожили тысячи эсэсовцев, обеспечивая поддержку советским фронтам.</li>
+            </ul>
+            <p>Это движение стало символом непокорности и мужества белорусского народа.</p>
+        </section>
+
+        <section id="liberation">
+            <h2>Освобождение и победа</h2>
+            <p>К событию освобождения Беларуси от фашистской оккупации привели крупные советские наступательные операции, такие как Багратионская операция (июнь-июль 1944). Она стала одной из крупнейших и наиболее успешных операций на Восточном фронте.</p>
+            <ul>
+                <li>3 июля 1944 года — освобождение Минска, столицы Беларуси, стало важным символом победы.</li>
+                <li>В течение 1944–1945 годов Беларусь была полностью освобождена и вновь стала частью Советского Союза.</li>
+            </ul>
+            <p>Беларусь стала ареной крупнейших боевых действий, и её территории были опустошены, однако народ проявил невероятную стойкость и героизм.</p>
+        </section>
+
+        <section id="losses">
+            <h2>Потери и героизм</h2>
+            <p>Значение войны для Беларуси огромно: по подсчетам, здесь погибло более 2,2 миллиона человек — около трети населения страны на тот момент. Множество городов, сёл, памятников, культурных ценностей было разрушено или утеряно.</p>
+            <ul>
+                <li>Белорусский народ внес огромный вклад в победу, проявив подвиги на фронте и в тылу.</li>
+                <li>В Минске и других городах установлены мемориалы и памятники в честь героев войны.</li>
+            </ul>
+        </section>
+
+        <section id="recovery">
+            <h2>Послевоенное восстановление</h2>
+            <p>После войны Беларусь начала долгий и трудный процесс восстановления. Были восстановлены города, заводы, инфраструктура. Народ объединялся в память о погибших и в честь победы.</p>
+            <ul>
+                <li>В Белоруссии создавалась сеть мемориалов и памятных мест.</li>
+                <li>В школах и музеях сохраняется память о героях и событиях войны.</li>
+            </ul>
+        </section>
+
+        <section id="significance">
+            <h2>Значение Великой Отечественной войны для Беларуси</h2>
+            <p>Война стала частью национальной идентичности белорусского народа. Он гордится своей стойкостью и героизмом, заслужив высокое уважение в истории.</p>
+            <ul>
+                <li>День Победы (9 мая) — главный праздник и символ памяти.</li>
+                <li>Традиции борьбы и сохранения памяти передаются из поколения в поколение.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Заключение</h2>
+            <p>Беларусь — страна, которая прошла через огонь и воду Великой Отечественной войны. Её народ продемонстрировал невероятную силу духа и несгибаемую волю к жизни и свободе. Эта трагическая, но героическая история остается важной частью национальной памяти и вдохновением для будущих поколений.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 История Беларуси и Великой Отечественной войны</p>
+    </footer>
+</body>
+</html>
