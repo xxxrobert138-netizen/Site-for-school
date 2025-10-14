@@ -1,190 +1,335 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Беларусь и Великая Отечественная война</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исторические моменты Великой Отечественной войны</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Общие стили */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto Slab', serif;
+            line-height: 1.7;
+	    background-image: url('https://zastavki.gas-kvas.com/uploads/posts/2024-05/zastavki-gas-kvas-com-f4ts-p-zastavki-velikaya-otechestvennaya-voina-33.jpg');
+            background-color: #222; /* Темный фон */
+            color: #eee; /* Светлый текст */
             margin: 0;
             padding: 0;
-            background-color: #333;
-            color: #f4f4f4;
+            overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
         }
+
+        /* Заголовок */
         header {
-	    background-image: url('https://kartinki.pics/uploads/posts/2021-07/1626837095_12-kartinkin-com-p-zadnii-fon-voina-krasivo-12.jpg');
-            background-color: #2b3a67;
+            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для лучшей читаемости */
             color: #fff;
-            padding: 400px;
+            padding: 20px;
             text-align: center;
+            position: relative; /* Для позиционирования псевдоэлемента */
+            overflow: hidden; /* Обрезаем все, что выходит за границы */
         }
-        header h1 {
-            margin: 0;
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/background_pattern.jpg') repeat center center/cover; /* Фоновый узор */
+            opacity: 0.2; /* Делаем его полупрозрачным */
+            z-index: -1; /* Помещаем его под текст */
         }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Тень для текста */
+        }
+
         nav {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            margin-top: 20px;
         }
+
         nav a {
-            color: #fff;
-            padding: 14px 20px;
+            color: #ccc;
             text-decoration: none;
-            transition: background-color 0.3s;
+            margin: 0 15px;
+            transition: color 0.3s ease; /* Плавный переход цвета */
+            display: inline-block; /* Для правильного отображения на мобильных устройствах */
         }
+
         nav a:hover {
-            background-color: #666;
+            color: #fff;
         }
+
+        /* Основной контент */
         main {
             padding: 20px;
-            max-width: 1200px;
-            margin: auto;
         }
-        section {
-            margin-bottom: 40px;
-            padding: 40px 30px;
-            border-radius: 10px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный темный фон */
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для секций */
+            transition: transform 0.3s ease; /* Плавное масштабирование при наведении */
+            position: relative; /* Для позиционирования псевдоэлемента */
+            overflow: hidden; /* Обрезаем все, что выходит за границы */
+        }
+
+        .section:hover {
+            transform: translateY(-5px); /* Поднимаем секцию при наведении */
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.1), rgba(0, 0, 255, 0.1)); /* Легкий градиент */
+            opacity: 0.2;
+            z-index: -1; /* Под текстом */
+            border-radius: inherit; /* Копируем радиус от родительского элемента */
+        }
+
+        .section h2 {
             color: #fff;
-            text-shadow: 0 0 5px rgba(0,0,0,0.7);
-            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Тень для заголовка */
+            position: relative; /* Для подчеркивания */
+            padding-bottom: 10px; /* Место для подчеркивания */
         }
-        h2 {
-            color: #ffd54f;
-            border-bottom: 2px solid #ffd54f;
-            padding-bottom: 10px;
-            text-shadow: 0 0 7px rgba(0,0,0,0.8);
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ddd; /* Цвет подчеркивания */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Тень для подчеркивания */
         }
+
+        .section p {
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto; /* Центрирование изображения */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Тень для изображения */
+            transition: transform 0.4s ease, box-shadow 0.4s ease; /* Плавные переходы */
+        }
+
+        .section img:hover {
+            transform: scale(1.05); /* Увеличение при наведении */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Более сильная тень */
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #bbb;
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 5px solid #888; /* Вертикальная линия слева */
+            background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный фон */
+            border-radius: 5px;
+        }
+
+        .caption {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-top: 10px;
+            text-align: center; /* Центрирование подписи */
+        }
+
+        /* Стили для списка */
         ul {
             list-style-type: disc;
-            margin-left: 20px;
+            padding-left: 30px;
+            color: #ccc;
         }
-        @media(max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-            nav a {
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Адаптивный дизайн */
+        @media (max-width: 768px) {
+            body {
                 padding: 10px;
             }
-            section {
-                padding: 30px 20px;
+
+            header {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .section {
+                padding: 15px;
+                margin-bottom: 20px;
             }
         }
 
-        #intro {
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: right center;
-            color: #222;
-            text-shadow: none;
-            box-shadow: none;
-            background-color: #f9f9f9;
+        /* Дополнительные эффекты
+и анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        #beginning {
-            background-image: url('https://slam.by/portfolio/partizany/images/obl8.png');
+
+        .section {
+            animation: fadeIn 1s ease forwards;
         }
-        #partisan {
-            background-image: url('https://static.tildacdn.biz/tild3164-3961-4664-a537-633466653361/--2.jpg');
+
+        /* Кнопка "Наверх" */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: none; /* Скрываем кнопку изначально */
+            transition: background-color 0.3s ease;
         }
-        #liberation {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Belorussia_Bagration_Op_-_Min_Photos_02-07-2011_067.JPG');
+
+        .back-to-top:hover {
+            background-color: rgba(0, 0, 0, 0.9);
         }
-        #losses {
-            background-image: url('https://www.bobrlife.by/wp-content/uploads/2020/05/flag-pobedi.jpg');
+
+        /* Стили для ссылок внутри контента (могут быть использованы для цитат или дополнительной информации) */
+        .section a {
+            color: #90caf9; /* Светло-голубой цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-weight: bold; /* Делаем текст жирным */
+            transition: color 0.3s ease; /* Добавляем плавный переход цвета при наведении */
         }
-        #recovery {
-            background-image: url('https://img.freepik.com/free-photo/still-life-soldier-helmet_23-2151633294.jpg');
-        }
-        #significance {
-            background-image: url('https://img.freepik.com/free-photo/cruel-war-scenes-digital-painting_456031-162.jpg?semt=ais_hybrid&w=740&q=80');
+
+        .section a:hover {
+            color: #bbdefb; /* Более светлый оттенок при наведении */
+            text-decoration: underline; /* Подчеркиваем ссылку при наведении */
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Беларусь и Великая Отечественная война</h1>
+        <h1>Исторические моменты Великой Отечественной войны</h1>
+        <nav>
+            <a href="#section1">Начало войны</a>
+            <a href="#section2">Письмо с фронта</a>
+            <a href="#section3">Зоя Космодемьянская</a>
+            <a href="#section4">Блокадный хлеб</a>
+            <a href="#section6">Операция «Багратион»</a>
+            <a href="#section7">Дети войны</a>
+            <a href="#section8">Победа в Берлине</a>
+            <a href="#section9">Парад Победы</a>
+            <a href="#section10">Вечный огонь</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#intro">Введение</a>
-        <a href="#beginning">Начало войны</a>
-        <a href="#partisan">Партизанское движение</a>
-        <a href="#liberation">Освобождение</a>
-        <a href="#losses">Потери и герои</a>
-        <a href="#recovery">Восстановление</a>
-        <a href="#significance">Значение</a>
-    </nav>
+
     <main>
-        <section id="intro">
-            <h2>Введение</h2>
-            <p>Беларусь — страна с богатой историей, которая в XX веке стала свидетелем и участником одних из самых важных и трагических событий в мировой истории — Великой Отечественной войны 1941–1945 годов. Эта война оставила глубокий след в судьбе народа, разрушила множество городов и сел, но вместе с тем стала символом мужества, стойкости и героизма белорусского народа.</p>
-        </section>
+        <div class="section" id="section1">
+            <h2>1. 22 июня 1941 <i class="fas fa-calendar-day"></i></h2>
+            <p><em>«В 4 часа утра началась война…»</em></p>
+            <img src="images/женщина_у_репродуктора.jpg" alt="Тревожное лицо женщины у репродуктора">
+            <div class="caption">Фото: тревожное лицо женщины у репродуктора.</div>
+        </div>
 
-        <section id="beginning">
-            <h2>Начало войны и оккупация</h2>
-            <p>23 июня 1941 года — в день, когда началось масштабное нападение на Советский Союз войсками нацистской Германии, Беларусь стала одним из первых фронтов. Гитлеровская армия быстро продвигалась по территории страны, установив жестокую оккупацию и репрессии. В первые месяцы войны Беларусь стала ареной ожесточённых боёв и страданий, а её население — свидетелями беспримерных зверств.</p>
-            <ul>
-                <li>Более 70% промышленных предприятий было эвакуировано или разрушено.</li>
-                <li>Множество городов и сел было стерто с лица земли.</li>
-                <li>В Беларуси находилось около 450 концентрационных лагерей и узников.</li>
-            </ul>
-        </section>
+        <div class="section" id="section2">
+            <h2>2. Письмо с фронта <i class="fas fa-envelope"></i></h2>
+            <p><em>«Мама, я жив. Не волнуйся. Мы держим линию…»</em></p>
+            <img src="images/письмо_с_фронта.jpg" alt="Скан письма">
+            <div class="caption">Скан письма, написанного карандашом.</div>
+        </div>
 
-        <section id="partisan">
-            <h2>Партизанское движение и сопротивление</h2>
-            <p>Несмотря на тяжелые условия, часть белорусского народа не смирилась с оккупацией. В лесах Беларуси сформировалось мощное партизанское движение — одно из крупнейших в Европе.</p>
-            <ul>
-                <li>Воевавшие партизаны боролись за освобождение своей земли, ликвидируя коммуникации, склады и немецкую технику.</li>
-                <li>В годы войны партизанские отряды уничтожили тысячи эсэсовцев, обеспечивая поддержку советским фронтам.</li>
-            </ul>
-            <p>Это движение стало символом непокорности и мужества белорусского народа.</p>
-        </section>
+        <div class="section" id="section3">
+            <h2>3. Зоя Космодемьянская <i class="fas fa-user-circle"></i></h2>
+            <p><em>«Я не боюсь смерти. Смерть за Родину — это честь.»</em></p>
+            <img src="https://detbiblioteka.ucoz.ru/_nw/3/90852502.jpg" alt="Портрет Зои Космодемьянской">
+            <div class="caption">Портрет героини, краткая биография.</div>
+        </div>
 
-        <section id="liberation">
-            <h2>Освобождение и победа</h2>
-            <p>К событию освобождения Беларуси от фашистской оккупации привели крупные советские наступательные операции, такие как Багратионская операция (июнь-июль 1944). Она стала одной из крупнейших и наиболее успешных операций на Восточном фронте.</p>
-            <ul>
-                <li>3 июля 1944 года — освобождение Минска, столицы Беларуси, стало важным символом победы.</li>
-                <li>В течение 1944–1945 годов Беларусь была полностью освобождена и вновь стала частью Советского Союза.</li>
-            </ul>
-            <p>Беларусь стала ареной крупнейших боевых действий, и её территории были опустошены, однако народ проявил невероятную стойкость и героизм.</p>
-        </section>
+        <div class="section" id="section4">
+            <h2>4. Блокадный хлеб <i class="fas fa-bread-slice"></i></h2>
+            <p>125 граммов — норма на день. Весы, кусочек хлеба, карточка.</p>
+            <img src="images/блокадный_хлеб.jpg" alt="Блокадный хлеб">
+            <div class="caption"></div>
+        </div>
 
-        <section id="losses">
-            <h2>Потери и героизм</h2>
-            <p>Значение войны для Беларуси огромно: по подсчетам, здесь погибло более 2,2 миллиона человек — около трети населения страны на тот момент. Множество городов, сёл, памятников, культурных ценностей было разрушено или утеряно.</p>
-            <ul>
-                <li>Белорусский народ внес огромный вклад в победу, проявив подвиги на фронте и в тылу.</li>
-                <li>В Минске и других городах установлены мемориалы и памятники в честь героев войны.</li>
-            </ul>
-        </section>
+        <div class="section" id="section6">
+            <h2>6. Операция «Багратион» <i class="fas fa-map-marked-alt"></i></h2>
+            <p><em>«Лето 1944. Освобождение Беларуси началось.»</em></p>
+            <img src="https://static.tildacdn.biz/tild6262-6561-4138-b731-376231306363/126.jpg" alt="Карта наступления">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Sov_partizans.jpg" alt="Фото партизан">
+            <div class="caption"></div>
+        </div>
 
-        <section id="recovery">
-            <h2>Послевоенное восстановление</h2>
-            <p>После войны Беларусь начала долгий и трудный процесс восстановления. Были восстановлены города, заводы, инфраструктура. Народ объединялся в память о погибших и в честь победы.</p>
-            <ul>
-                <li>В Белоруссии создавалась сеть мемориалов и памятных мест.</li>
-                <li>В школах и музеях сохраняется память о героях и событиях войны.</li>
-            </ul>
-        </section>
+        <div class="section" id="section7">
+            <h2>7. Дети войны <i class="fas fa-child"></i></h2>
+            <p><em>«Мне было 6. Я помню взрывы и тишину после них.»</em></p>
+            <img src="https://www.warmuseum.by/images/heroes/15-11/2015-11-04_1.jpg" alt="Ребёнок в ватнике, взгляд в камеру">
+            <div class="caption"></div>
+        </div>
 
-        <section id="significance">
-            <h2>Значение Великой Отечественной войны для Беларуси</h2>
-            <p>Война стала частью национальной идентичности белорусского народа. Он гордится своей стойкостью и героизмом, заслужив высокое уважение в истории.</p>
-            <ul>
-                <li>День Победы (9 мая) — главный праздник и символ памяти.</li>
-                <li>Традиции борьбы и сохранения памяти передаются из поколения в поколение.</li>
-            </ul>
-        </section>
+        <div class="section" id="section8">
+            <h2>8. Победа в Берлине <i class="fas fa-flag-checkered"></i></h2>
+            <p><em>«9 мая. Красное знамя над Рейхстагом.»</em></p>
+            <img src="https://tatfrontu.ru/sites/default/files/styles/1600_1600/public/img/2024/05/04/img-20240504-wa0064.jpg?itok=XxMWdHz8" alt="Знамя над Рейхстагом">
+            <div class="caption"></div>
+        </div>
 
-        <section>
-            <h2>Заключение</h2>
-            <p>Беларусь — страна, которая прошла через огонь и воду Великой Отечественной войны. Её народ продемонстрировал невероятную силу духа и несгибаемую волю к жизни и свободе. Эта трагическая, но героическая история остается важной частью национальной памяти и вдохновением для будущих поколений.</p>
-        </section>
+        <div class="section" id="section9">
+            <h2>9. Парад Победы 1945 <i class="fas fa-parade"></i></h2>
+            <p><em>«Солдаты бросают фашистские знамёна к мавзолею.»</em></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/2020_Moscow_Victory_Day_Parade_021.jpg" alt="Парад Победы">
+            <div class="caption"></div>
+        </div>
+
+        <div class="section" id="section10">
+            <h2>10. Вечный огонь <i class="fas fa-fire-alt"></i></h2>
+            <p><em>«Память не гаснет. Она живёт в нас.»</em></p>
+            <img src="https://rossaprimavera.ru/static/files/ce52df831e15.jpg" alt="Вечный огонь">
+            <div class="caption"></div>
+        </div>
     </main>
+
+     <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
